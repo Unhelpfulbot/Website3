@@ -1,0 +1,40 @@
+.one{
+    font-size: 8px;
+    font-family: 'Times New Roman';
+    font-style: italic;
+}
+.two{
+    font-size: 16px;
+    font-family: 'Georgia';
+    font-style: bold;
+}
+.three{
+    font-size: 24px;
+    font-family: 'serif';
+    font-style: italic;
+}
+.four{
+    font-size: 32px;
+    font-family: 'Arial';
+    font-style: bold;
+}
+.five{
+    font-size: 8px;
+    font-family: 'Cambria';
+    font-style: italic;
+}
+.six{
+    font-size: 16px;
+    font-family: 'Gill Sans';
+    font-style: bold;
+}
+.seven{
+    font-size: 24px;
+    font-family: 'Lucida Sans';
+    font-style: italic;
+}
+.eight{
+    font-size: 32px;
+    font-family: 'Arial Narrow';
+    font-style: bold;
+}
