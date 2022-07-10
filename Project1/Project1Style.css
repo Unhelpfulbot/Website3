@@ -12,7 +12,7 @@ a{
 nav.footer{
     padding-top: 20px;
     background-color: black;
-    height: 50px;
+    height: 70px;
 }
 img.left{
     float:left;
@@ -48,4 +48,8 @@ p.sub{
 }
 td{
     font-weight:bold;
+}
+p.white{
+    color:white;
+    ;
 }
