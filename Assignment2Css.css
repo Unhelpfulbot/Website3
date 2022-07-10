@@ -1,0 +1,63 @@
+nav{
+    background-color: black;
+    height: 15%;
+    padding-left:35%;
+    padding-right:35%;
+}
+button.butt1{
+    color:white;
+    background-color: black;
+    font-size: 100%;
+    padding-top:5%;
+    padding-left:5%;
+    padding-right:5%;
+    
+}
+button.butt1:hover{
+    background-color: orange;
+    height: 15%;
+}
+button.butt2{
+    background-color: orange;
+    color: white;
+    border-color: orange;
+    border-radius: 10px;
+}
+iframe{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border: 5px pink;
+}
+img{
+    border-radius: 10px;
+    border-color: black;
+}
+footer{
+    color: white;
+    background-color: black;
+    height: 50px;
+}
+.footer{
+    padding-top: 10px;
+}
+.one{
+    background-color: hotpink;
+    font-family: Arial;
+    font-size: 12px;
+    height: 30px;
+    width: 50%;
+}
+.two{
+    background-color: pink;
+    font-family: Courier;
+    font-size: 18px;
+    height: 40px;
+    width: 50%;
+}
+.three{
+    background-color: lightpink;
+    font-family: Georgia;
+    font-size: 18px;
+    height: 40px;
+    width: 50%;
+}
