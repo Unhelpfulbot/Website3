@@ -1,0 +1,39 @@
+.main{
+    height: 500px;
+    width: 100%;
+    background-size: 50%;
+    background-image: url('Stolen\ Picture.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+.message{
+    position: absolute;
+    color: white;
+    background-color: rgba(58, 58, 58, 0.6);
+    bottom: 10%;
+    right: 30%;
+}
+.clock{
+    position: absolute;
+    background-image: url('Hand.png');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 200px;
+    top: 10%;
+    left: 30%;
+    background-position-y: center;
+    background-position-x: 95%;
+}
+.clockhand{
+    position: absolute;
+    background-image: url('Hand.png');
+    background-size: 30%;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 200px;
+    top: 27%;
+    left: 23%;
+    transform: rotate(90deg);
+}
