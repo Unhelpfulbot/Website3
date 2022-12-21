@@ -1,0 +1,432 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(197, 197, 197);
+}
+
+/* Heading */
+header{
+    margin: 0;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    background-color: black;
+    height: 100px;
+    color: white;
+    border-bottom: 4px gray solid;
+    background-image: url(Thecity.jpg);
+    background-size: 100%;
+    background-position: center;
+}
+#Mtitlebgfilter{
+    position: absolute;
+    background-color: rgb(46, 45, 45);
+    opacity: 50%;
+    width: 100%;
+    height: 100%;
+}
+h1#Mtitle{
+    position: absolute;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 5vw;
+    align-self: center;
+    text-shadow: 0.5vw 0.5vw 0.5vw black, 0.6vw 0.6vw 0.7vw gray;
+}
+header:hover{
+    background-image: url(nycnight.jpg);
+}
+
+
+/* Navigation Bar */
+div.dropdown{
+    height: 100px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    background-image: url(Sky.jpg);
+    background-size: 1600px;
+    background-position: 0px, 50px;
+    animation-name: returnanim;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+}
+
+div#filter{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+}
+
+p#MHead{
+    color: white;
+    font-size: 36px;
+    margin-top: 8px;
+    text-shadow: 1px 1px 1.5px rgb(34, 34, 34), 2px 1px 2px rgb(175, 175, 175), 2.5px 1.5px 2.5px white;
+}
+#droparrow{
+    position: absolute;
+    display: flex;
+    width: 8%;
+    height: 20%;
+    left: 46%;
+    top: 70%;
+}
+
+#returnarrow{
+    position: absolute;
+    display: flex;
+    width: 12%;
+    height: 6%;
+    left: 44%;
+    top: 90%;
+}
+
+nav.navibar{
+    position: relative;
+    height: 300px;
+    width: 100%;
+    display: none;
+    background-image: url(Sky.jpg);
+    background-size: 1600px;
+    background-position: 0px, 50px;
+    margin: 0;
+    padding: 0;
+    animation-name: dropdownanim;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+}
+
+.navbut{
+    border: 0px;
+    margin: 2.5%;
+    height: 60%;
+    width: 20%;
+    font-size: 2vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: lightblue;
+    text-shadow: 0.05vw 0.05vw 0.1vw blue, 0.1vw 0.1vw 0.15vw rgb(87, 173, 254), 0.2vw 0.2vw 03vw black;
+    font-weight: 60%;
+    border: black 4px;
+    border-style: double;
+}
+.navbut:hover{
+    filter: blur(1px);
+    border-color: blue;
+}
+
+/* Navigation Buttons */
+button#Profile{
+    background-image: url(profilebg.png);
+    background-size: 300px;
+    background-position-y: -100px;
+}
+
+button#Resume{
+    background-image: url(Resumebg.jpg);
+    background-size: 400px;
+}
+
+button#Education{
+    background-image: url(Education.jpg);
+    background-size: 400px;
+}
+
+button#Projects{
+    background-image: url(projectsbg.jpg);
+    background-size: 400px;
+}
+
+button#Home{
+    filter: blur(1px);
+    border-color: blue;
+}
+
+
+/* Info Display Layout*/
+div.infodisplay{
+    position: relative;
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 1%;
+    min-width: 700px;
+    max-width: 90%;
+    min-height: 300px;
+    max-height: 800px;
+    padding: 0;
+    background-color: white;
+    border: black 4px solid;
+}
+div.infodisplay2{
+    position: relative;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 1%;
+    min-width: 700px;
+    max-width: 90%;
+    min-height: 300px;
+    max-height: 800px;
+    padding: 0;
+    background-color: white;
+    border: black 4px solid;
+}
+
+div.sidebar{
+    padding: 5px;
+    margin: 0;
+    min-width: 200px;
+    max-width: 300px;
+    min-height: 300px;
+    max-height: 800px;
+    background-image:url(Space.jpg);
+    background-position: 400px, 0px;
+    border-right: black 4px solid;
+    float: left;
+}
+
+div#Resumepage, div#Educationpage, div#Projectspage, div#Education2page{
+    display: none;
+}
+
+/* Home */
+#HomeText{
+    padding: 2%;
+    float: right;
+}
+#HomeText2{
+    justify-content: center;
+    align-content: center;
+}
+
+#sideimg{
+    padding: 0;
+    width: 80%;
+    margin: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 4px double white;
+}
+
+hr#separation{
+    background: gray;
+    border: 1px gray solid;
+    width: 90%;
+}
+
+#Georgia-White{
+    font-size: 24px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#Georgia-White-small{
+    font-size: 14px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 1px 1px 1px black, 1.5px 1.5px 1.5px gray;
+}
+
+hr#whitehr{
+    background: white;
+    border: 1px white solid;
+    width: 80%;
+}
+
+#introhead{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+}
+
+#introtext{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    word-spacing: 2px;
+}
+
+hr#introhr{
+    border: 2px black solid;
+    width: 99%;
+}
+
+/* Resume */
+div#leftside{
+    display: flex;
+    float: left;
+    width: 10%;
+    min-height: 300px;
+    max-height: 800px;
+    background-image: url(Spacebg.jpg);
+    background-size: 900px;
+    background-position-x: -400px;
+    border-right: rgb(41, 40, 56) 5px solid;
+}
+
+div#ResumeArea{
+    width: 80%;
+    min-height: 300px;
+    max-height: 700px;
+    padding: 0;
+    background: rgb(83, 126, 143);
+}
+
+div#rightside{
+    display: flex;
+    float: right;
+    width: 10%;
+    min-height: 300px;
+    max-height: 800px;
+    background-image: url(Spacebg.jpg);
+    background-size: 900px;
+    background-position-x: 300px;
+    border-left: rgb(41, 40, 56) 5px solid;
+}
+
+iframe#resume{
+    width: 100%;
+    height: 500px;
+    margin: 0;
+    padding: 0;
+    border-top: black 5px solid;
+    border-bottom: black 5px solid;
+}
+
+/* Education */
+    div.edubg{
+        background-image: url(rpi.jpg);
+        background-size: 1600px;
+        width: 100%;
+        min-height: 300px;
+        max-height: 800px;
+    }
+    div.edulayout{
+        border: 3px black solid;
+        width: 96%;
+        height: 300px;
+        border-radius: 10px;
+        margin: 2%;
+        background-color: rgb(114, 187, 221, 0.7);
+    }
+
+    p#Edutitle{
+        font-size: 36px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 700;
+        width: 100%;
+        height: 70px;
+        background-image: url(engineeredubg.jpg);
+        background-size: 1600px;
+        background-position: -200px, -300px;
+        margin: 0;
+        padding-top: 30px;
+        border-bottom: 4px solid black;
+    }
+
+    div.logolayout{
+        display: flex;
+        justify-content: center;
+    }
+
+    img#logo{
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        border: 2px dashed black;
+        background: white;
+    }
+
+    p#edutext{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+/* Footer */
+footer{
+    position: relative;
+    margin-top: 100px;
+    padding: 0;
+}
+nav.footer{
+    position: fixed;
+    bottom: 0;
+    background: lightblue;
+    width: 100%;
+    height: 75px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: black 5px solid;
+}
+#footericonholderfirst{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left: rgb(2, 70, 143) 2px dotted;
+    border-right: rgb(2, 70, 143) 2px dotted;
+}
+
+#footericonholder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right: rgb(2, 70, 143) 2px dotted;
+}
+
+#footericon{
+    width: 50px;
+    margin: 5px;
+}
+
+#icondesc{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+    text-shadow: 1px 1px 1px gray;
+}
+
+div.Eduinfolayout{
+    border-bottom: black 4px solid;
+}
+
+div.edudropdown{
+    max-width: 400px;
+    min-width: 300px;
+    min-height: 300px;
+    max-height: 800px;
+    border-right: black solid 4px;
+}
+
+/* Projects */
+/* Animations */
+@keyframes dropdownanim{
+    0%{
+        height: 100px;
+    }
+    100%{
+        height: 300px;
+    }
+}
+
+@keyframes returnanim{
+    0%{
+        height: 300px;
+    }
+    100%{
+        height: 100px;
+    }
+}

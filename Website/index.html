@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="Jacky'sWebsite.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Header of the Website -->
+    <header>
+        <div id="Mtitlebgfilter"></div>
+        <h1 id="Mtitle" onmouseover='changename("Jacky Chen","Mtitle")' onmouseleave='changename("Unhelpful","Mtitle")'>
+            Unhelpful </h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <div id="dp" class="dropdown">
+        <div id="filter">
+            <b><p id="MHead"> Profile </p></b>
+        </div>
+        <img onclick='openitem("dp","nb")' id="droparrow" src="DarkDropArrow.png">
+    </div>
+
+    <nav id="nb" class="navibar">
+        <div id="filter">
+        <button class="navbut" id="Profile" onclick='changeinfo("Profile","Profile2")'>Profile</button>
+        <button class="navbut" id="Resume" onclick='changeinfo("Resume")'>Resume</button>
+        <button class="navbut" id="Education" onclick='changeinfo("Education", "Education2")'>Education</button>
+        <button class="navbut" id="Projects" onclick='changeinfo("Projects")'>Projects</button>
+    </div>
+        <img onclick='openitem("nb","dp")' id="returnarrow" src="ReturnUp.png">
+    </nav>
+
+    <!-- Display information Screen -->
+    <div class="display">
+
+        <!-- Home -->
+        <div class="infodisplay" id="Profilepage">
+            <div class="sidebar">
+                <img id="sideimg" src="placeholder.jpg">
+                <hr id="separation">
+                <center>
+                    <p id="Georgia-White"> Jacky Chen</p>
+                    <p id="Georgia-White-small"> 
+                        From: New York City<br><br>
+                        Education: Rensselear Polytechnical Institute<br><br>
+                        Major: Mechanical Engineering<br><br>
+                        Graduation Year: 2025 (Expected)<br><br>
+                    </p>
+                    <hr id="whitehr">
+                    <p id="Georgia-White-small">
+                        Contact Information<br>
+                        Email: Jackychen0422s@gmail.com<br>
+                        Cell Number: 917-615-5351<br>
+                    </p>
+                </center>
+            </div>
+            <div id="HomeText">
+                <h1 id="introhead"> Welcome to my Website, I am Jacky Chen </h1>
+                <hr id="introhr">
+                <p id="introtext"> I am currently attending Rensselear Polytechnic Insitute with the focus of getting a
+                    bacheleors in Mechnaical Engineering. Although I am trying to become an Engineer, I am willing to
+                    learn all types of skills to help me become more skillful. I am mainly learning coding languages at
+                    the moment as I find coding fun and closely related to engineering. In addition, one day I want to
+                    recreate and improve a game I played duuring my Elementary school years, Graal Online ERA. While my
+                    main goal is to be a successful engineer that can improve living standards and solve global issues
+                    with my innovations.
+                </p>
+                <hr>
+                <h1 id="introhead"> Current Desires/Goals </h1>
+                <hr id="introhr">
+                <p id="introtext"> I am currently seeking an Internship or a Co-op oppurtunity that will grant be hands on experience 
+                    for the Fall of 2023 or Spring of 2024 term. I am interested in oppurtunities related to programming or engineering.
+                    The ideal engineering industries for me are automative and robotics. While for programming, I am
+                    seeking to improve my coding fundementals as I only have basic knowledge of the current coding languages I know. However,
+                    I am also willing to work in other industries as long as I can gain new skills or improve on my current skills. 
+                </p>
+            </div>
+        </div>
+        <div class="infodisplay2" id="Profile2page">
+            <div id=""HomeText2>
+                <center>
+                    <u><h1 id="introhead"> PlaceHolder </h1></u>
+                    <div class="imgdisplaylayout">
+
+                    </div>
+                </center>
+            </div>
+        </div>
+        
+        
+
+        <!-- Resume -->
+        <div class="infodisplay" id="Resumepage">
+            <div id="leftside"></div>
+            <div id="ResumeArea">
+                <Center>
+                <u><h1 id="introhead"> Resume </h1></u> 
+                <iframe id="resume" src="file:///C:/Users/2021j/Documents/Resume%20(09-20-22).pdf"></iframe>
+                <b><p>Last Editted: 11/22/22</p></b>
+                </Center> 
+            </div>
+            <div id="rightside"></div>
+        </div>
+
+        <!-- Education -->
+        <div class="infodisplay" id="Educationpage">
+            <div class="edubg">
+                <center>
+                <p id="Edutitle"> School Attended</p>
+                </center>
+            <div class="edulayout">
+                <div class="logolayout">
+                <img id="logo" src="ccny.jpg">
+                </div>
+                <center>
+                <p id="edutext"> 
+                    I attended the City College of New York for my Freshman Year (August 2021 to May 2022).<br>
+                    GPA: 3.62<br>
+                    Major: Mechanical Engineering
+                </p> 
+                </center>
+            </div>
+            <div class="edulayout">
+                <div class="logolayout">
+                    <img id="logo" src="rpilogo.png">
+                </div>
+                <center>
+                <p id="edutext"> 
+                    I am currently attending Rensselear Polytechnical Insitute (August 2022 to Current).<br>
+                    GPA: N/A<br>
+                    Major: Mechanical Engineering
+                </p> 
+                </center>
+            </div>
+            </div>
+        </div>
+
+        <div class="infodisplay2" id="Education2page">
+            <div class="Eduinfolayout">
+                <center>
+                <h1 id="introhead"> Certifications </h1> 
+                </center>
+            </div>
+            <div class="edudropdown">
+                <li>
+                    <ul id="edulist">HTML/CSS Certifications</ul>
+
+                </li>
+            </div>
+            <div class="eduinfo"></div>
+        </div>
+
+        <!-- Projects -->
+        <div class="infodisplay" id="Projectspage">
+
+        </div>
+
+    </div>
+    <script src="Jacky'sWebsite.js"></script>
+</body>
+
+<!-- Footer -->
+<footer> 
+    <nav id="footer" class="footer">
+        <div id="footericonholderfirst">
+        <a href="mailto:jackychen0422s@gmail.com"><img id="footericon" src="Mail.png"></a>
+        <p id="icondesc"><abrr title="Jackychen0422s@gmail.com">Email</abrr></p>
+        </div>
+        <div id="footericonholder">
+            <a href="callto:9176155351"><img style="width:35px;" id="footericon" src="phone.png"></a>
+            <p id="icondesc"><abrr title="Phone Number">(1) 917-615-5351</abrr></p>
+        </div>
+        <div id="footericonholder">
+            <a href="https://www.linkedin.com/in/jacky-chen-b13076222/"><img style="width: 35px;" id="footericon" src="linkedin.jpg"></a>
+            <p id="icondesc"><abbr title="www.linkedin.com/in/jacky-chen-b13076222"> LinkedIn </abbr></p>
+        </div>
+    </nav>
+</footer>
+</html>
+<Var></Var>
