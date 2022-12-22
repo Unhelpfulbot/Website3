@@ -1,5 +1,6 @@
 var current = "Profile";
 var current2 = "Profile2";
+var edupage = "blank";
 function changename(newname, id){
     document.getElementById(id).innerHTML = newname;
 }
@@ -34,4 +35,11 @@ function changeinfo(newinfo, newinfo2){
 function openitem(current,item,id){
     document.getElementById(item).style.display = "flex";
     document.getElementById(current).style.display = "none";
+}
+
+function changeeduinfo(info){
+    document.getElementById("eduprompt").innerHTML = info;
+    document.getElementById(edupage).style.display = "none";
+    document.getElementById(info).style.display = "block";
+    edupage = info;
 }

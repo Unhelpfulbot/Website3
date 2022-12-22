@@ -3,7 +3,20 @@ body{
     padding: 0;
     background-color: rgb(197, 197, 197);
 }
+/* General CSS */
+.starthidden{
+    display: none;
+}
 
+.marg{
+    margin: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    font-weight: 600;
+    background-color: gray;
+    border: double black 6px;
+    padding: 5px;
+}
 /* Heading */
 header{
     margin: 0;
@@ -13,6 +26,8 @@ header{
     align-content: center;
     background-color: black;
     height: 100px;
+    min-width: 800px;
+    width: 100%;
     color: white;
     border-bottom: 4px gray solid;
     background-image: url(Thecity.jpg);
@@ -42,6 +57,7 @@ header:hover{
 /* Navigation Bar */
 div.dropdown{
     height: 100px;
+    min-width: 800px;
     width: 100%;
     position: relative;
     display: flex;
@@ -57,6 +73,7 @@ div.dropdown{
 div#filter{
     display: flex;
     width: 100%;
+    min-width: 800px;
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
     justify-content: center;
@@ -90,6 +107,7 @@ nav.navibar{
     position: relative;
     height: 300px;
     width: 100%;
+    min-width: 800px;
     display: none;
     background-image: url(Sky.jpg);
     background-size: 1600px;
@@ -147,15 +165,18 @@ button#Home{
     border-color: blue;
 }
 
-
+div.display{
+    width: 100%;
+    min-width: 800px;
+}
 /* Info Display Layout*/
 div.infodisplay{
     position: relative;
     display: flex;
+    margin-top: 1%;
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: 1%;
-    min-width: 700px;
+    min-width: 600px;
     max-width: 90%;
     min-height: 300px;
     max-height: 800px;
@@ -163,12 +184,13 @@ div.infodisplay{
     background-color: white;
     border: black 4px solid;
 }
+
 div.infodisplay2{
     position: relative;
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 1%;
-    min-width: 700px;
+    min-width: 600px;
     max-width: 90%;
     min-height: 300px;
     max-height: 800px;
@@ -183,11 +205,12 @@ div.sidebar{
     min-width: 200px;
     max-width: 300px;
     min-height: 300px;
-    max-height: 800px;
+    max-height: 100%;
     background-image:url(Space.jpg);
     background-position: 400px, 0px;
     border-right: black 4px solid;
     float: left;
+    overflow: hidden;
 }
 
 div#Resumepage, div#Educationpage, div#Projectspage, div#Education2page{
@@ -198,6 +221,7 @@ div#Resumepage, div#Educationpage, div#Projectspage, div#Education2page{
 #HomeText{
     padding: 2%;
     float: right;
+    overflow: scroll;
 }
 #HomeText2{
     justify-content: center;
@@ -254,6 +278,37 @@ hr#introhr{
     width: 99%;
 }
 
+div#Homecontent{
+    padding: 2%;
+    height: 300px;
+    width: 96%;
+    align-items: center;
+    background-image: url(GreatWall.jpg);
+    background-size: 1400px;
+    background-position-y: -200px;
+    border-top: black solid 4px;
+}
+
+div.imgdisplaylayout{
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+#hobbieimg{
+    width: 150px;
+    border: double black 5px;
+}
+
+#hobbietext{
+    font-weight: bold;
+    font-family: 'Lucida Sans';
+    font-size: 20px;
+    color: skyblue;
+    text-shadow: 1px 1px 2px gray, 1.5px 1.5px 3px black;
+}
+
 /* Resume */
 div#leftside{
     display: flex;
@@ -297,6 +352,9 @@ iframe#resume{
 }
 
 /* Education */
+    div#flex{
+        display: flex;
+    }
     div.edubg{
         background-image: url(rpi.jpg);
         background-size: 1600px;
@@ -345,6 +403,51 @@ iframe#resume{
         font-size: 16px;
         font-weight: 600;
     }
+
+    div.dropdownlayout{
+        position: relative;
+        display: inline-block;
+    }
+
+    div.dropdownlayout:hover #edudropdown{
+        display: block;
+    }
+
+    div.Eduinfolayout{
+        border-bottom: black 4px solid;
+    }
+    
+    div#edudropdown{
+        display: none;
+        width: 200px;
+        padding-bottom: 10%;
+        background: gray;
+    }
+    
+    button#edubutton, button#eduprompt{
+        margin: 0;
+        position: relative;
+        background: gray;
+        font-weight: bold;
+        font-family: "Times New Roman";
+        height: 50px;
+        max-width: 200px;
+        min-width: 200px;
+        font-size: 14px;
+        color: black;
+        border: none;
+        border-right: 4px solid black;
+        border-bottom: 4px solid black;
+        text-shadow: 1px 1px 2px #383838;
+    }
+
+    button#eduprompt{
+        height: 70px;
+        font-size: 20px;
+    }
+
+    
+
 
 /* Footer */
 footer{
@@ -399,19 +502,38 @@ nav.footer{
     text-shadow: 1px 1px 1px gray;
 }
 
-div.Eduinfolayout{
-    border-bottom: black 4px solid;
-}
-
-div.edudropdown{
-    max-width: 400px;
-    min-width: 300px;
+/* Projects */
+div#leftside2{
+    display: flex;
+    float: left;
+    width: 10%;
     min-height: 300px;
     max-height: 800px;
-    border-right: black solid 4px;
+    background-image: url();
+    background-size: 900px;
+    background-position-x: -400px;
+    border-right: rgb(41, 40, 56) 5px solid;
 }
 
-/* Projects */
+div#Area{
+    width: 80%;
+    min-height: 300px;
+    max-height: 700px;
+    padding: 0;
+    background: rgb(83, 126, 143);
+}
+
+div#rightside2{
+    display: flex;
+    float: right;
+    width: 10%;
+    min-height: 300px;
+    max-height: 800px;
+    background-image: url();
+    background-size: 900px;
+    background-position-x: 300px;
+    border-left: rgb(41, 40, 56) 5px solid;
+}
 /* Animations */
 @keyframes dropdownanim{
     0%{

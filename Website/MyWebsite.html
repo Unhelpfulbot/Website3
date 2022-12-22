@@ -64,8 +64,8 @@
                 <hr id="introhr">
                 <p id="introtext"> I am currently attending Rensselear Polytechnic Insitute with the focus of getting a
                     bacheleors in Mechnaical Engineering. Although I am trying to become an Engineer, I am willing to
-                    learn all types of skills to help me become more skillful. I am mainly learning coding languages at
-                    the moment as I find coding fun and closely related to engineering. In addition, one day I want to
+                    learn all types of skills to help me become more skillful. I am currently learning coding languages 
+                    during my free time as I find coding fun and closely related to engineering. In addition, one day I want to
                     recreate and improve a game I played duuring my Elementary school years, Graal Online ERA. While my
                     main goal is to be a successful engineer that can improve living standards and solve global issues
                     with my innovations.
@@ -82,12 +82,21 @@
             </div>
         </div>
         <div class="infodisplay2" id="Profile2page">
-            <div id=""HomeText2>
+            <div id="HomeText2">
                 <center>
-                    <u><h1 id="introhead"> PlaceHolder </h1></u>
-                    <div class="imgdisplaylayout">
-
-                    </div>
+                    <u><h1 id="introhead"> Hobbies </h1></u>
+                </center>
+            </div>
+            <div id="Homecontent">
+                <center>
+                <div class="imgdisplaylayout">
+                    <img id="hobbieimg" src="placeholder.jpg">
+                    <p id="hobbietext"> Hello this text is just a place holder</p>
+                </div>
+                <div class="imgdisplaylayout">
+                    <img id="hobbieimg" src="placeholder.jpg">
+                    <p id="hobbietext"> Hello this text is just a place holder</p>
+                </div>
                 </center>
             </div>
         </div>
@@ -143,23 +152,58 @@
         <div class="infodisplay2" id="Education2page">
             <div class="Eduinfolayout">
                 <center>
-                <h1 id="introhead"> Certifications </h1> 
+                <h1 id="introhead"> Certifications/Skills </h1> 
                 </center>
             </div>
-            <div class="edudropdown">
-                <li>
-                    <ul id="edulist">HTML/CSS Certifications</ul>
-
-                </li>
+            <div id="flex">
+                <div class="dropdownlayout">
+                    <button id="eduprompt"> Skills/Certifications </button>
+                    <div class="starthidden" id="edudropdown">
+                        <button id="edubutton" onclick='changeeduinfo("HTML/CSS Certification")'> Certification in HTML/CSS</button>
+                        <button id="edubutton" onclick='changeeduinfo("C#")'> C#</button>
+                        <button id="edubutton" onclick='changeeduinfo("Python")'> Python</button>
+                        <button id="edubutton" onclick='changeeduinfo("SolidWorks")'> SolidWorks</button>
+                        <button id="edubutton" onclick='changeeduinfo("Workshop Machinary")'> Workshop Machinary</button>    
+                    </div>
+                </div>
+                <div class="eduinfo">
+                    <div id="blank"></div>
+                    <div class="starthidden marg" id="HTML/CSS Certification" > <P> I took a HTML and CSS course over the summer of 2022,
+                     and got a certificate for completeion and understanding of the web development language. After the course I worked
+                    on a few small projects that are simple but functions the way I wanted the web to function. Certification below:</P>
+                    <iframe src="MicroCredential_Certificate.pdf"> </iframe></div>
+                    <div class="starthidden marg" id="C#"> <P> I began learning C# for fun over the summer of 2021, as I tried to create
+                    games in Unity. Although I successfully followed tutorial to understand the basic for character control and different properties. I was unable
+                    to create a functional game at the time. The first game I created worked but was filled with problems which was not what I desired.
+                    The second game I created function way smoother and through designing game, for my own interest, I learned the basic for 2D game creation 
+                    and how to code in C#.</P> </div>
+                    <div class="starthidden marg" id="Python"> <P> I learnt Python during my time at the City College of New York. We were taught about basic
+                        usage of variables, functions, loops, arrays, and so on. Using the knowledge of python I learnt I decided to challenge myself and create
+                    a discord bot that serves little to no purpose. </P></div>
+                    <div class="starthidden marg" id="SolidWorks"> <p> I learnt SolidWorks during my time a City College of New York. In the class I took we learnt how
+                        make sketches like blue prints of an object. Then we learnt how to make the object that was sketch using Solidworks. We learn about how to extrude a 2D
+                        shape to a 3D shapes or to make curvatures, wires, intrusions, shells, planes, mirroring, pattern, screws, and many more. Ultimately in the class I was able to design a hand mixer.  
+                    </p></div>
+                    <div class="starthidden marg" id="Workshop Machinary"> I learnt how to use workshop michanary at my time at Rensselear Polytechnical Insitute. During the class,
+                        we had to create a cannon or a train. My partner and I, we did work in pairs, decided to both make a cannon. We were taught the basic of the Lathe, Vertical Mill,
+                        Drill press, Horizontal Mill, Band saw, polisher. In addition, we were taught about metal welding, non-metal welding, and laser cutting. But most importantly
+                        how to safely used these equipments. Ultimately to finish the project, my partner and I needed to learn the tool together through reading the lab manual.
+                    </div>
+                </div>
             </div>
-            <div class="eduinfo"></div>
         </div>
 
         <!-- Projects -->
         <div class="infodisplay" id="Projectspage">
-
+            <div id="leftside2"></div>
+            <div id="Area">
+                <Center>
+                <u><h1 id="introhead"> Projects </h1></u> 
+                
+                </Center> 
+            </div>
+            <div id="rightside2"></div>
         </div>
-
     </div>
     <script src="Jacky'sWebsite.js"></script>
 </body>
