@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="Jacky'sWebsite.js"></script>
 </head>
 
 <body>
@@ -90,12 +91,16 @@
             <div id="Homecontent">
                 <center>
                 <div class="imgdisplaylayout">
-                    <img id="hobbieimg" src="placeholder.jpg">
-                    <p id="hobbietext"> Hello this text is just a place holder</p>
+                    <img id="hobbieimg" src="program.jpg">
+                    <p id="hobbietext"> During my free time I enjoy coding for fun, as many of my personal projects all involve some sort of programming.</p>
                 </div>
                 <div class="imgdisplaylayout">
-                    <img id="hobbieimg" src="placeholder.jpg">
-                    <p id="hobbietext"> Hello this text is just a place holder</p>
+                    <img id="hobbieimg" src="game.jpg">
+                    <p id="hobbietext"> Playing games is also a hooby of mines, as I get to play with my friends.</p>
+                </div>
+                <div class="imgdisplaylayout">
+                    <img id="hobbieimg" src="volleyball.jpg">
+                    <p id="hobbietext"> Similar to games, I enjoy playing sports with my friends.</p>
                 </div>
                 </center>
             </div>
@@ -109,8 +114,8 @@
             <div id="ResumeArea">
                 <Center>
                 <u><h1 id="introhead"> Resume </h1></u> 
-                <iframe id="resume" src="file:///C:/Users/2021j/Documents/Resume%20(09-20-22).pdf"></iframe>
-                <b><p>Last Editted: 11/22/22</p></b>
+                <iframe id="resume" src="Resume (12-23-22).pdf"></iframe>
+                <b><p>Last Editted: 12/23/22</p></b>
                 </Center> 
             </div>
             <div id="rightside"></div>
@@ -156,15 +161,13 @@
                 </center>
             </div>
             <div id="flex">
-                <div class="dropdownlayout">
+                <div id="leftbar">
                     <button id="eduprompt"> Skills/Certifications </button>
-                    <div class="starthidden" id="edudropdown">
-                        <button id="edubutton" onclick='changeeduinfo("HTML/CSS Certification")'> Certification in HTML/CSS</button>
-                        <button id="edubutton" onclick='changeeduinfo("C#")'> C#</button>
-                        <button id="edubutton" onclick='changeeduinfo("Python")'> Python</button>
-                        <button id="edubutton" onclick='changeeduinfo("SolidWorks")'> SolidWorks</button>
-                        <button id="edubutton" onclick='changeeduinfo("Workshop Machinary")'> Workshop Machinary</button>    
-                    </div>
+                    <button id="edubutton" onclick='changeeduinfo("HTML/CSS Certification")'> Certification in HTML/CSS</button>
+                    <button id="edubutton" onclick='changeeduinfo("C#")'> C#</button>
+                    <button id="edubutton" onclick='changeeduinfo("Python")'> Python</button>
+                    <button id="edubutton" onclick='changeeduinfo("SolidWorks")'> SolidWorks</button>
+                    <button class="lastbut" id="edubutton" onclick='changeeduinfo("Workshop Machinary")'> Workshop Machinary</button>
                 </div>
                 <div class="eduinfo">
                     <div id="blank"></div>
@@ -177,14 +180,14 @@
                     to create a functional game at the time. The first game I created worked but was filled with problems which was not what I desired.
                     The second game I created function way smoother and through designing game, for my own interest, I learned the basic for 2D game creation 
                     and how to code in C#.</P> </div>
-                    <div class="starthidden marg" id="Python"> <P> I learnt Python during my time at the City College of New York. We were taught about basic
+                    <div class="starthidden marg" id="Python"> <P> I learned Python during my time at the City College of New York. We were taught about basic
                         usage of variables, functions, loops, arrays, and so on. Using the knowledge of python I learnt I decided to challenge myself and create
                     a discord bot that serves little to no purpose. </P></div>
-                    <div class="starthidden marg" id="SolidWorks"> <p> I learnt SolidWorks during my time a City College of New York. In the class I took we learnt how
+                    <div class="starthidden marg" id="SolidWorks"> <p> I learned SolidWorks during my time a City College of New York. In the class I took we learnt how
                         make sketches like blue prints of an object. Then we learnt how to make the object that was sketch using Solidworks. We learn about how to extrude a 2D
                         shape to a 3D shapes or to make curvatures, wires, intrusions, shells, planes, mirroring, pattern, screws, and many more. Ultimately in the class I was able to design a hand mixer.  
                     </p></div>
-                    <div class="starthidden marg" id="Workshop Machinary"> I learnt how to use workshop michanary at my time at Rensselear Polytechnical Insitute. During the class,
+                    <div class="starthidden marg" id="Workshop Machinary"> I learned how to use workshop michanary at my time at Rensselear Polytechnical Insitute. During the class,
                         we had to create a cannon or a train. My partner and I, we did work in pairs, decided to both make a cannon. We were taught the basic of the Lathe, Vertical Mill,
                         Drill press, Horizontal Mill, Band saw, polisher. In addition, we were taught about metal welding, non-metal welding, and laser cutting. But most importantly
                         how to safely used these equipments. Ultimately to finish the project, my partner and I needed to learn the tool together through reading the lab manual.
@@ -195,17 +198,103 @@
 
         <!-- Projects -->
         <div class="infodisplay" id="Projectspage">
-            <div id="leftside2"></div>
-            <div id="Area">
-                <Center>
-                <u><h1 id="introhead"> Projects </h1></u> 
-                
-                </Center> 
+            <div id="leftside2">
             </div>
-            <div id="rightside2"></div>
+            <img id="leftarrow" onclick='subtractone()' src="leftarrow.png">
+            <img id="rightarrow" onclick='addone()' src="rightarrow.png">
+            <div id="Area">
+                <button id="lock" onclick='openitem2("leftcover","rightcover","leftcoveropen","rightcoveropen")'><img id="lockimg" src="lock.png"></button>
+                <div id="topcover">
+                    <Center>
+                    <u><h1 id="introhead"> Projects </h1></u> 
+                    </Center> 
+                </div>
+                <div id="leftcover"></div>
+                <div id="leftcoveropen"></div>
+                <div id="rightcover"></div>
+                <div id="rightcoveropen"></div>
+                <div id="project0"><p id="projintro"> Click on the arrows to the side to view my projects, personal but also school projects. Some projects
+                    were failures but I learned from my mistakes.
+                </p>
+                </div>
+                <div id="project1">
+                    <center>
+                    <h1 id="projtitle"> Failed Unity Multiplayer Game (Upon Them 12/22 - 1/22) </h1>
+                    <a id="projtitle" href="https://play.unity.com/mg/other/upon-them-v1-0"> Upon Them Link </a>
+                    <p id="projdesc"> This was the first time that I started to code for fun and I decided to challenge myself. So I try to learn how to code C#
+                        as I developed the game in Unity. The game has basic two movement and interactions inspired by Among Us. However, unlike the game Among Us,
+                        the multiplayer feature had a lot of glitches like one player movement cause another player screen to shake. Thus, this was a failure but I learnt
+                        a lot about game creation from this. 
+                    </p>
+                    </center>
+                </div>
+                <div id="project2">
+                    <center>
+                    <h1 id="projtitle"> Successful Singleplayer Game (TerroRise 5/22 - 6/22)</h1>
+                    <a id="projtitle" href="https://play.unity.com/mg/other/terrorise-game"> TerroRise Link</a>
+                        <p id="projdesc"> Although the game is not as smooth , I believe the game came out to be what I wanted with my limited coding skills.
+                            The purpose of the game is to solve puzzles kill monsters and beat the final boss before you die a total of ten times. The game is actually quite hard 
+                            so you should give it a try. When creating this single player game I gained further knowledge on game creation with new features like inventory, NPC movements,
+                            and dropping items. Thus, the game is not perfect but included everythign I learned up to this point.
+                        </p>
+                    </center>
+                </div>
+                <div id="project3">
+                    <center>
+                        <h1 id="projtitle"> Discord Bot (7/22 - 7/22)</h1>
+                        <a id="projtitle" href="https://replit.com/@Unhelpfulbot/Discordbot#main.py"> Discord Bot Code Link</a>
+                            <p id="projdesc"> The discord bot I created didn't do a lot but included basic python code with the usage of loops, arrays, and conditional statements.
+                                During the summer of 2022 I was enrolled in SYEP, summer youth employment program, I was placed to work at the Department of Motor Vechile. There was 
+                                four other SYEP workers and we decided to communicate through discord. I decided to create a bot that send annoucment during certain time of the day like when
+                                it's lunch break, when break is over, when it's time to leave, and when to start working. In addition, the bot also has a reaction tracker which 
+                                was used for determining who was in the building or who went out or stayed in for lunch. 
+                            </p>
+                    </center>
+                </div>
+                <div id="project4">
+                    <center>
+                        <h1 id="projtitle"> SYEP Last Day Website (8/22 - 8/22)</h1>
+                        <a id="projtitle" href="https://DMVLASTDAY.unhelpfulbot.repl.co"> Website Link</a>
+                            <p id="projdesc"> The website was made in 4 hours so the design is really simple and the functions of the website was really simple.
+                                The purpose of the website was to just give the link of the website to everyone that were full time worker at the Department of 
+                                Motor Vechile since SYEP workers only work for a period of two months. Thus, I included everyones message in the website and included 
+                                some of the group photos we had. 
+                            </p>
+                    </center>
+                </div>
+                <div id="project5">
+                    <center>
+                        <h1 id="projtitle"> Cannon Buidling From Aluminum (8/22 - 11/22)</h1>
+                        <div class="projgallery">
+                            <img id="projimg" src="cannonback.jpeg">
+                            <img id="projimg" src="cannonfront.jpeg">
+                            <img id="projimg" src="cannonleft.jpeg">
+                            <img id="projimg" src="cannonright.jpeg">
+                        </div>
+                            <p id="projdesc"> The cannon was made in my Engineering Processes class which we learned about workshop machinary. For the class we worked in pairs to understand
+                                how to complete each step on the manual as percise as possible. My partner and I worked really well and learnt off of each others mistake when we realize something
+                                was odd. Machines and tools that we learned how to safely used consist of the Lathe, Vertical Mill, Horizontal Mill, Band Saw, Polisher, Caliber, Micrometer, Drill Press. For each of the machinaries,
+                                we learnt basic skills like facing something off, knurling, creating ridges, angle cutting, and others. The barrel of the cannon, the pin, and the wheels are 
+                                made using the Lathe, while the carriage is made using the vertical mill, horizontal mill, drill press, and band saw. Ultimately, cannon building was an enjoyable experience
+                                as it was really hands on and we collaborated really well as a pair.  
+                            </p>
+                    </center>
+                </div>
+                <div id="project6">
+                    <center>
+                        <h1 id="projtitle"> This Website (9/22 - 12/22)</h1>
+                            <p id="projdesc"> The website took around 3 months to make but I only worked on the website for 2 to 3 hours a week during the month time frame. Thus,
+                                this simple website took a long time. In this website, I tried to include everything I have learned to the best of my ability. Also for the website, I tried
+                                my best to make it scaleable for different devices other than the computer. If you have any suggestion to help me improve my website you can email me using the email
+                                link located in the footer.
+                            </p>
+                    </center>
+                </div>
+            </div>
+            <div id="rightside2">
+            </div>
         </div>
     </div>
-    <script src="Jacky'sWebsite.js"></script>
 </body>
 
 <!-- Footer -->

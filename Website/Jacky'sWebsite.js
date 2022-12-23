@@ -1,6 +1,10 @@
 var current = "Profile";
 var current2 = "Profile2";
 var edupage = "blank";
+var totalproj = 6;
+var count = 0;
+var currentproj = "project0";
+
 function changename(newname, id){
     document.getElementById(id).innerHTML = newname;
 }
@@ -32,9 +36,19 @@ function changeinfo(newinfo, newinfo2){
     }
 }
 
-function openitem(current,item,id){
+function openitem(current,item){
     document.getElementById(item).style.display = "flex";
     document.getElementById(current).style.display = "none";
+}
+
+function openitem2(currents, currents2, item, item2){
+    document.getElementById(item).style.display = "block";
+    document.getElementById(currents).style.display = "none";
+    document.getElementById(item2).style.display = "block";
+    document.getElementById(currents2).style.display = "none";
+    document.getElementById("lock").style.display = "none";
+    document.getElementById("leftarrow").style.display = "block";
+    document.getElementById("rightarrow").style.display = "block";
 }
 
 function changeeduinfo(info){
@@ -42,4 +56,26 @@ function changeeduinfo(info){
     document.getElementById(edupage).style.display = "none";
     document.getElementById(info).style.display = "block";
     edupage = info;
+}
+
+function addone(){
+    document.getElementById(currentproj).style.display = "none"
+    count += 1;
+    if(count > totalproj){
+        count = 1;
+    }
+    var proj = "project" + count;
+    document.getElementById(proj).style.display = "block"
+    currentproj = proj;
+}
+
+function subtractone(){
+    document.getElementById(currentproj).style.display = "none"
+    count -= 1;
+    if(count <= 0){
+        count = totalproj;
+    }
+    var proj = "project" + count;
+    document.getElementById(proj).style.display = "block"
+    currentproj = proj;
 }
