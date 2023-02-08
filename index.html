@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacky's Website</title>
+    <link rel="stylesheet" href="main.css" type="text/css">
+</head>
+<body>
+    <div class="flexbox">
+
+        <!-- (START) Navigaation Bar -->
+        <div class="left-navigationbar">
+            <div class="group">
+            <div class="buttongroup-top">
+                <div id="profile-contain"><img class="profile-icon" src="profilebg.png"></div>
+            </div>
+            <div class="buttongroup-mid">
+                <button id="icons-but" onclick='changepage("home")'><img class="icons" id="home" src="home.png"><p id="icons-desc">Home</p></button>
+                <button id="icons-but" onclick='changepage("resume")'><img class="icons" id="resume" src="cv.png"><p id="icons-desc">Resume</p></button>
+                <button id="icons-but" onclick='changepage("skill")'><img class="icons" id="skill" src="skills.png"><p id="icons-desc">Skills</p></button>
+                <button id="icons-but" onclick='changepage("education")'><img class="icons" id="education"src="college-graduation.png"><p id="icons-desc">Education</p></button>
+                <button id="icons-but" onclick='changepage("project")'><img class="icons" id="project" src="project.png"><p id="icons-desc">Projects</p></button>
+            </div>
+            <div class="buttongroup-bot">
+                <button id="icons-but" onclick='changepage("contact")'><img class="icons" id="contact" src="contact.png"><p id="icons-desc">Contacts</p></button>
+                <button id="icons-but" onclick='changepage("setting")'><img class="icons" id="setting" src="settings.png"><p id="icons-desc">Settings</p></button>
+            </div>
+            </div>
+        </div>
+        <!-- (END) Navigaation Bar -->
+
+        <div class="homepage">
+            <div class="intro">
+                <center>
+                <P id="introtitle"> Introduction </P>
+                <p id="introtext"> Hello, I am Jacky Chen a sophomore at Rensselaer Polytechnical Institute. I am currently seeking for internships, Co-ops, and research oppurtunity to learn new skills and strengthen my skills.</p>
+                </center>
+            </div>
+        </div>
+    </div>
+    <script src="practice.js"></script>
+</body>
+</html>
