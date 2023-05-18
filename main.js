@@ -477,6 +477,7 @@ function changeDirection(e){
 
 function reset(){
     gameOver = false;
+    trans = false;
     velX = 0;
     velY = 0;
     snakeBody = [];
