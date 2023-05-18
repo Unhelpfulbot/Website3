@@ -4,7 +4,9 @@ body{
     width: 100%;
     height: 100%;
     min-height: 100vh;
+    min-width: 1400px;
 }
+
 .flexbox{
     display: flex;
     position: relative;
@@ -18,11 +20,13 @@ body{
     width: 50px;
     position: relative;
 }
+
+/* Navigation Bar */
 .left-navigationbar{
     display: flex;
     background-color: rgb(44, 45, 51);
     height: 100vh;
-    min-height: 500px;
+    min-height: 550px;
     min-width: 50px;
     width: 50px;
     justify-content: center;
@@ -117,35 +121,947 @@ body{
     border-radius: 25px;
 }
 
-/* Home CSs*/
+/* Home CSS*/
 .homepage{
     position: relative;
     display: flex;
     width: 100%;
     height: 100vh;
-    min-height: 500px;
-}
-.intro{
-    position: absolute;
+    min-height: 550px;
+    align-items: center;
     justify-content: center;
-    align-self: center;
-    width: 300px;
-    min-width: 100px;
-    top: 20%;
-    left: 20%;
 }
-#introtitle{
-    font-family: sans-serif;
-    font-size: 5vh;
-    font-weight: 600;
+
+#home-frame{
+    position: relative;
+    width: 500px;
+    height: 500px;
 }
-#introtext{
+
+.home-div::-webkit-scrollbar-track {
+    border: 1px solid #000;
+    padding: 2px 0;
+    background-color: #404040;
+}
+  
+.home-div::-webkit-scrollbar {
+    width: 8px;
+}
+  
+.home-div::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #737272;
+    border: 1px solid #000;
+}
+
+.home-div{
+    position: relative;
+    width: 400px;
+    overflow-y: scroll;
+    height: 96%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background: rgb(41, 41, 41);
+    border: solid 3px rgb(0, 0, 0);
+}
+
+#instruct{
+    font-family: "Permanent Marker";
+    font-size: 30px;
+    font-weight: 700;
+    color: aliceblue;
+    text-shadow: 1px 1px 1px black;
+}
+
+#instruct-text{
+    font-family: "EB Garamond";
+    font-size: 20px;
+    font-weight: 700;
+    color: aliceblue;
+    text-shadow: 1px 1px 1px black;
+}
+
+#facts{
+    font-size: 20px;
+    color: aliceblue;
+    font-weight: 500;
+    font-family: "ABeeZee";
+    text-shadow: 1px 1px 1px black;
+}
+
+#reset{
+    position: absolute;
     display: none;
-    font-family: sans-serif;
-    font-size: 3vh;
-    font-weight: 600;
-    z-index: 2;
+    top: 20px;
+    border: solid black 2px;
+    background-color: gray;
+    font-size: 38px;
+    font-family: "Lobster";
+    height: 50px;
+    border-radius: 25px;
 }
-#introtitle:hover + #introtext{
+
+
+/* Home Game CSS */
+#map{
+    border: solid rgb(137, 48, 167) 4px;
+}
+#character{
+    position: absolute;
+    background-color: white;
+}
+
+
+/* Resume CSS*/
+.resumepage{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    min-height: 550px;
+}
+
+#resumeframe{
+    position: absolute;
+    display: flex;
+    width: 90%;
+    left: 5%;
+    height: 90%;
+    top: 5%;
+    background-color: transparent;
+}
+
+#resumedisplay{
+    position: relative;
+    float: left;
+    width: 80%;
+    height: 100%;
+    background-color: rgb(46, 46, 46);
+    border: solid black 4px;
+    border-right: none;
+}
+
+#resumeselection{
+    float: right;
+    width: 20%;
+    height: 100%;
+    background-color: transparent;
+}
+.resumebut-top{
+    width: 100%;
+    height: 15%;
+    background-color: rgb(46, 46, 46);
+    border: solid black 4px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 28px;
+    font-family: "Lobster";
+}
+
+.resumebut{
+    width: 100%;
+    height: 15%;
+    background-color: rgb(146, 146, 146);
+    border: solid black 4px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top: none;
+    font-size: 28px;
+    font-family: "Lobster";
+}
+
+.resumebut:hover, .resumebut-top:hover{
+    background-color: rgb(46, 46, 46);
+}
+
+#display{
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 90%;
+    height: 90%;
+
+}
+
+#cover{
+    width: 100%;
+    height: 56.1%;
+    border-left: solid black 4px;
+}
+
+#resumes{
+    background-color: rgb(46, 46, 46);
+    border-left: none;
+}
+
+/* Skill CSS*/
+.skillpage{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    min-height: 550px;
+}
+
+#skillframe{
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 90%;
+    height: 90%;
+    border: solid black 6px;
+    background-color: rgba(19, 19, 19, 0.85);
+}
+
+#skilldesc{
+    width: 100%;
+    height: 85%;
+    display: flex;
+    justify-content: center;
+}
+
+#skillname{
+    color: rgb(212, 212, 212);
+    font-size: 32px;
+    font-family: "Permanent Marker";
+}
+
+#skillinfo{
+    color: rgb(212, 212, 212);
+    font-size: 18px;
+    font-family: "ABeeZee";
+    width: 80vw;
+}
+
+#skillimg{
+    height: 150px;
+}
+
+#skillselect{
+    width: 100%;
+    height: 15%;
+    border-top: solid black 4px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: inline-block;
+}
+
+#butholder{
+    height: 100%;
+    width: 1500px;
+}
+
+#skillbut{
+    height: 100%;
+    width: 160px;
+    background: #737272;
+    border: solid black 2px;
+    font-family: "Lobster";
+    font-size: 20px;
+
+}
+
+#skillselect::-webkit-scrollbar-track {
+    border: 1px solid #000;
+    padding: 2px 0;
+    background-color: #404040;
+}
+  
+#skillselect::-webkit-scrollbar {
+    height: 15px;
+}
+  
+#skillselect::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #737272;
+    border: 1px solid #000;
+}
+
+/* Education CSS*/
+.educationpage{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    min-height: 550px;
+    background-image: url("rpicampus.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#school-list{
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    background: rgba(55, 55, 55, 0.504);
+    border-right: solid black 5px;
+}
+
+#school{
+    position: absolute;
+    top: 2.5%;
+    left: 42.5%;
+    display: flex;
+    justify-content: center;
+    width: 55%;
+    height: 95%;
+    background-color: rgba(98, 98, 98, 0.86);
+    border: solid rgb(0, 0, 0) 5px;
+    overflow-y: scroll;
+}
+
+#school::-webkit-scrollbar-track {
+    border: 1px solid #000;
+    padding: 2px 0;
+    background-color: #404040;
+}
+  
+#school::-webkit-scrollbar {
+    width: 8px;
+}
+  
+#school::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #737272;
+    border: 1px solid #000;
+}
+
+#schoollogo{
+    margin-top: 100px;
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
+    border: solid black 5px;
+}
+
+#schoolname{
+    font-family: "Lobster";
+    font-size: 36px;
+}
+
+#schooldesc, #schoolclass{
+    font-family: "Lora";
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.schoolbut{
+    width: 100%;
+    height: 100px;
+    border: none;
+    border-bottom: solid black 3px;
+    font-size: 32px;
+    font-family: "Audiowide";
+    background-color: rgba(106, 106, 106, 0.533);
+}
+
+.schoolbut:hover{
+    background-color: rgba(67, 67, 67, 0.874);
+}
+/* Project CSS*/
+.projectpage{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    min-height: 550px;
+    overflow: hidden;
+}
+
+#project-image{
+    position: absolute;
+    width: 60%;
+    left: 2.5%;
+    top: 2.5%;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid black 4px;
+}
+
+#project-title{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 2.5%;
+    width: 60%;
+    height: 20%;
+    top: 80%;
+    background-color: rgb(28, 28, 28);
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+}
+
+#project-desc-pull{
+    position: absolute;
+    width: 5%;
+    height: 80%;
+    right: 0;
+    top: 2.5%;
+    background-color: rgb(64, 64, 64);
+    border-left: solid black 4px;
+    border-bottom: solid black 4px;
+    border-top: solid black 4px;
+    border-top-left-radius: 25%;
+    border-bottom-left-radius: 25%;
+}
+
+#project-desc{
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    top: 2.5%;
+    right: 0%;
+    width: 35%;
+    height: 80%;
+    background-color: rgb(64, 64, 64);
+    border-left: solid black 4px;
+    border-bottom: solid black 4px;
+    border-top: solid black 4px;
+    border-top-left-radius: 25%;
+    border-bottom-left-radius: 25%;
+    animation-name: desc-pull;
+    animation-iteration-count: 1;
+    animation-duration: 5s;
+}
+
+#project-change{
+    position: absolute;
+    display: inline-flex;
+    width: 30%;
+    height: 15%;
+    top: 85%;
+    left: 67.5%;
+}
+
+#project-name{
+    font-size: 10vh;
+    font-weight: 700;
+    font-family: "Patua One";
+    color: rgb(57, 57, 57);
+    animation-name: project-title-color-change;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+#project-text{
+    margin: 8%;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 1px rgb(48, 48, 48);
+    font-weight: 700;
+    font-family: "EB Garamond";
+    text-align: center;
+}
+
+#project-img{
+    width: 100%;
+    height: 100%;
+}
+
+#project-left{
+    border-top-left-radius: 50px;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55);
+    border: solid black 2px;
+}
+
+#project-right{
+    border-top-right-radius: 50px;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55);
+    border: solid black 2px;
+}
+
+#project-left:hover, #project-right:hover{
+    background-color: rgba(43, 43, 43, 0.55);
+}
+
+#pull{
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: "EB Garamond";
+    background: transparent;
+    border: none;
+}
+
+/* Contact CSS*/
+.contactpage{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    min-height: 550px;
+}
+
+#contactcontainer{
+    position: absolute;
+    width: 90%;
+    display: flex;
+    height: 90%;
+    top: 5%;
+    left: 5%;
+    background: rgba(47, 47, 47, 0.896);
+    border-radius: 50px;
+    border: solid black 5px;
+}
+
+#contact-left{
+    height: 100%;
+    width: 30%;
+}
+
+#contact-right{
+    height: 100%;
+    width: 70%;
+    border-left: solid black 4px;
+
+}
+
+#contact{
+    font-family: "Lobster";
+    font-size: 48px;
+    font-weight: 700;
+    color: rgb(205, 205, 205);
+    text-shadow: 2px 2px 1px black;
+}
+
+.input{
+    margin: 1%;
+    text-align: center;
+    width: 90%;
+    height: 50px;
+    font-size: 26px;
+    font-family: 'Times New Roman', Times, serif;
+    border: solid black 3px;
+    border-radius: 22px;
+    background-color: #737272;
+}
+
+.input-desc{
+    margin: 1%;
+    text-align: center;
+    font-size: 36px;
+    color: rgb(173, 173, 173);
+    text-shadow: 2px 2px 1px black;
+}
+
+.input::-webkit-input-placeholder{
+    color: #282727;
+}
+
+#message-title{
+    font-size: 48px;
+    font-weight: 700;
+    color: rgb(205, 205, 205);
+    text-shadow: 2px 2px 1px black;
+    font-family: "Lobster";
+}
+
+#message-input{
+    width: 90%;
+    font-size: 28px;
+    display: inline;
+    border: solid black 3px;
+    text-align: center;
+    border-radius: 25px;
+    background-color: #737272;
+    min-height: 60vh;
+    max-height: 60vh;
+    min-width: 90%;
+    max-width: 90%;
+    height: 60vh;
+}
+
+#message-input::-webkit-input-placeholder{
+    color: #282727;
+}
+
+#submit-contact{
+    margin-top: 2%;
+    border: solid black 3px;
+    background: rgb(173, 173, 173);
+    width: 500px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 48px;
+    font-family: "Lobster";
+    font-weight: 600;
+}
+
+/* Setting CSS*/
+.settingpage{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    min-height: 550px;
+}
+
+#setting-frame{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    border: solid black 4px;
+    background-color: #737272;
+    border-radius: 25px;
+    overflow-y: scroll;
+}
+
+#light-container{
+    position: relative;
+    display: flex;
+    top: 50px;
+    width: 90%;
+    height: 50px;
+}
+
+#light-filter{
+    position: absolute;
+    left: 20%;
+    width: 300px;
+    text-align: center;
+    font-size: 50px;
+    font-family: "Lobster";
+    font-weight: 700;
+}
+
+#mode-slider{
+    top: 50px;
+    right: 15%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    border: 3px solid black;
+    height: 50px;
+    width: 300px;
+    border-radius: 25px;
+    background-color: #737272;
+    padding: 0;
+    margin: 0;
+}
+
+#slider{
     display: block;
+    text-align: center;
+    margin-left: 150px;
+    border: solid black 2px;
+    background-color: #282727;
+    border-radius: 25px;
+    height: 50px;
+    width: 150px;
+    color: white;
+    font-family: "Eb Garamond";
+    font-size: 36px;
+    font-weight: 700;
+}
+
+#reminder{
+    position: absolute;
+    top: 180px;
+    text-align: center;
+    font-family: "Patua One";
+    font-size: 24px;
+    width: 90%;
+    margin-left: 5%;
+}
+
+#setting-button-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 400px;
+    width: 50%;
+    height: 60px;
+    left: 25%;
+}
+
+#loginpage-but{
+    border: solid black 4px;
+    border-radius: 25px;
+    height: 60px;
+    width: 160px;
+    background-color: #404040;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-family: "Lobster";
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+#signuppage-but{
+    border: solid black 4px;
+    border-radius: 25px;
+    height: 60px;
+    width: 160px;
+    background-color: #404040;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-family: "Lobster";
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+#username-login{
+    position: absolute;
+    display: flex;
+    left: 5%;
+    width: 90%;
+    height: 90px;
+    top: 90px;
+    align-items: center;
+    justify-content: center;
+}
+
+#password-login{
+    position: absolute;
+    display: flex;
+    left: 5%;
+    width: 90%;
+    height: 90px;
+    top: 180px;
+    align-items: center;
+    justify-content: center;
+}
+
+#name-signup{
+    position: absolute;
+    display: flex;
+    left: 5%;
+    width: 90%;
+    height: 90px;
+    top: 90px;
+    align-items: center;
+    justify-content: center;
+}
+
+#email-signup{
+    position: absolute;
+    display: flex;
+    left: 5%;
+    width: 90%;
+    height: 90px;
+    top: 180px;
+    align-items: center;
+    justify-content: center;
+}
+
+#phone-signup{
+    position: absolute;
+    display: flex;
+    left: 5%;
+    width: 90%;
+    height: 90px;
+    top: 270px;
+    align-items: center;
+    justify-content: center;
+}
+
+#username-signup{
+    position: absolute;
+    display: flex;
+    left: 5%;
+    width: 90%;
+    height: 90px;
+    top: 360px;
+    align-items: center;
+    justify-content: center;
+}
+
+#password-signup{
+    position: absolute;
+    display: flex;
+    left: 5%;
+    width: 90%;
+    height: 90px;
+    top: 450px;
+    align-items: center;
+    justify-content: center;
+}
+
+#password-signup2{
+    position: absolute;
+    display: flex;
+    left: 5%;
+    width: 90%;
+    height: 90px;
+    top: 540px;
+    align-items: center;
+    justify-content: center;
+}
+
+.setting-title{
+    display: inline-block;
+    font-size: 36px;
+    font-family: "Lobster";
+    font-weight: 700;
+    width: 40%;
+    text-align: center;
+}
+
+.settinginput{
+    display: inline-block;
+    width: 60%;
+    height: 60px;
+    border: solid black 4px;
+    font-family: "Patua One";
+    font-size: 24px;
+}
+
+#setting-title{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 10px;
+    font-family: "Lobster";
+    font-size: 36px;
+}
+
+#login, #signup{
+    display: none;
+}
+
+#button-login{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 100px;
+    height: 50px;
+    width: 100%;
+}
+
+#button-signup{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 670px;
+    height: 50px;
+    width: 100%;
+}
+
+#back-button{
+    position: absolute;
+    border: solid black 2px;
+    background: #282727;
+    color: white;
+    width: 150px;
+    height: 50px;
+    font-size: 38px;
+    font-family: "Lobster";
+    text-align: center;
+    border-radius: 25px;
+    top: 10px;
+    left: 10px;
+}
+
+#login-button{
+    border: solid black 2px;
+    background: #282727;
+    color: white;
+    width: 150px;
+    height: 50px;
+    font-size: 38px;
+    font-family: "Lobster";
+    text-align: center;
+    border-radius: 25px;
+}
+
+#signup-button{
+    border: solid black 2px;
+    background: #282727;
+    color: white;
+    width: 200px;
+    height: 50px;
+    font-size: 38px;
+    font-family: "Lobster";
+    text-align: center;
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
+#setting-frame::-webkit-scrollbar-track {
+    border: 1px solid #000;
+    padding: 2px 0;
+    background-color: #404040;
+    border-radius: 25px;
+}
+  
+#setting-frame::-webkit-scrollbar {
+    width: 25px;
+}
+  
+#setting-frame::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #737272;
+    border: 1px solid #000;
+}
+
+#timer{
+    position: absolute;
+    width: 20%;
+    left: 40%;
+    font-size: 36px;
+    font-family: "EB Garamond";
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Overall Page*/
+.resumepage, .skillpage, .educationpage, .projectpage, .contactpage, .settingpage{
+    display: none;
+    filter: none;
+}
+
+
+/* Overall Useables*/
+#arrow-left{
+    rotate: 180deg;
+    width: 50%;
+}
+#arrow-right{
+    width: 50%;
+}
+
+/* Project Animation */
+@keyframes project-title-color-change{
+    0%{
+        color: black;
+    }
+    25%{
+        color: rgb(47, 47, 47);
+    }
+    50%{
+        color: rgb(83, 83, 83);
+    }
+    75%{
+        color: rgb(47, 47, 47);
+    }
+    100%{
+        color: black;
+    }
+}
+
+@keyframes desc-pull{
+    0%{
+        right: -35%;
+    }
+    100%{
+        right: 0%;
+    }
 }

@@ -5,10 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jacky's Website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Lora|Audiowide|Permanent+Marker|EB+Garamond|ABeeZee|Patua+One">
     <link rel="stylesheet" href="main.css" type="text/css">
+    <script type="text/javascript" src="project.js"></script>
+    <script type="text/javascript" src="school.js"></script>
+    <script type="text/javascript" src="skill.js"></script>
+    <script type="text/javascript" src="account.js"></script>
 </head>
 <body>
-    <div class="flexbox">
+    <div class="flexbox" id="flexbox">
 
         <!-- (START) Navigaation Bar -->
         <div class="left-navigationbar">
@@ -20,7 +25,7 @@
                 <button id="icons-but" onclick='changepage("home")'><img class="icons" id="home" src="home.png"><p id="icons-desc">Home</p></button>
                 <button id="icons-but" onclick='changepage("resume")'><img class="icons" id="resume" src="cv.png"><p id="icons-desc">Resume</p></button>
                 <button id="icons-but" onclick='changepage("skill")'><img class="icons" id="skill" src="skills.png"><p id="icons-desc">Skills</p></button>
-                <button id="icons-but" onclick='changepage("education")'><img class="icons" id="education"src="college-graduation.png"><p id="icons-desc">Education</p></button>
+                <button id="icons-but" onclick='changepage("education")'><img class="icons" id="education" src="college-graduation.png"><p id="icons-desc">Education</p></button>
                 <button id="icons-but" onclick='changepage("project")'><img class="icons" id="project" src="project.png"><p id="icons-desc">Projects</p></button>
             </div>
             <div class="buttongroup-bot">
@@ -31,15 +36,196 @@
         </div>
         <!-- (END) Navigaation Bar -->
 
-        <div class="homepage">
-            <div class="intro">
+        <!-- (START) Homepage -->
+        <div class="homepage" id="homepage">
+            <button id="reset" onclick="reset()"> Start Over </button>
+            <div class="home-div" id="left-instruct">
                 <center>
-                <P id="introtitle"> Introduction </P>
-                <p id="introtext"> Hello, I am Jacky Chen a sophomore at Rensselaer Polytechnical Institute. I am currently seeking for internships, Co-ops, and research oppurtunity to learn new skills and strengthen my skills.</p>
+                    <h1 id="instruct"> Instructions </h1>
+                    <p id="instruct-text"> Snake Game Items: <br>
+                    - When the head of the snake gets in contact with a light bulb the snake length will enlongate <br>
+                    For each light bulb, a fact about me will appear<br>
+                    - When the head of the snake gets in contact with a potion, the snake gains the ability to cross itself within the potions duration (5s)<br>
+                    When the snake gains the effect, the snake will be blue <br>
+                    Snake Game Lose Conditions:<br>
+                    - When the snake hits the border of the map;<br>
+                    - When the snake hits itself without the effect of the potions
+                    </p>
+
+                </center>
+            </div>
+            <div id="home-frame">
+                <canvas id="map"></canvas>
+                </canvas>
+            </div>
+            <div class="home-div" id="right-fact">
+                <center>
+                    <p id="facts">
+
+                    </p>
                 </center>
             </div>
         </div>
+        <!-- (END) Homepage -->
+
+        <!-- (START) Resume Page -->
+        <div class="resumepage" id="resumepage">
+            <div id="resumeframe">
+                <div id="resumedisplay">
+                    <iframe id="display" src="Resume.pdf"></iframe>
+                </div>
+                <div id="resumeselection">
+                    <button class="resumebut-top" id="resumes" onclick='changeresume("resumes")'> Resume </button>
+                    <button class="resumebut" id="coverletter" onclick='changeresume("coverletter")'> Cover Letter </button>
+                    <button class="resumebut" id="transcript" onclick='changeresume("transcript")'> Transcript </button>
+                    <div id="cover"></div>
+                </div>
+            </div>
+        </div>
+        <!-- (END) Resume Page -->
+
+        <!-- (START) Skill Page -->
+        <div class="skillpage" id="skillpage">
+            <div id="skillframe">
+                <div id="skilldesc">
+                    <center>
+                    <p id="skillname"> Skill </p>
+                    <img id="skillimg" src="skills.png">
+                    <p id="skillinfo"> The following are skills that I currently possess. </p>
+                    </Center>
+                </div>
+                <div id="skillselect">
+                    <div id="butholder">
+                        <button id="skillbut" onclick='changeskillinfo("C#")'>C#</button>
+                        <button id="skillbut" onclick='changeskillinfo("Python")'>Python</button>
+                        <button id="skillbut" onclick='changeskillinfo("SolidWorks")'>SolidWorks</button>
+                        <button id="skillbut" onclick='changeskillinfo("Arduino IDE")'>Arduino IDE</button>
+                        <button id="skillbut" onclick='changeskillinfo("Machining")'>Machining</button>
+                        <button id="skillbut" onclick='changeskillinfo("Web Development")'>Web Development</button>
+                        <button id="skillbut" onclick='changeskillinfo("C++")'>C++</button>
+                        <button id="skillbut" onclick='changeskillinfo("Nx")'>Nx</button>
+                        <button id="skillbut" onclick='changeskillinfo("Laser cutting")'>Laser Cutting</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- (END) Skill Page -->
+
+        <!-- (START) Education Page -->
+        <div class="educationpage" id="educationpage">
+            <div id="school-list">
+                <button class="schoolbut" id="CN" onclick='changeschool("CN")'> College Now </button>
+                <button class="schoolbut" id="ccny" onclick='changeschool("ccny")'> The City College of New York </button>
+                <button class="schoolbut" id="rpi" onclick='changeschool("rpi")'> Rensselaer Polytechnic Institute </button>
+            </div>
+            <div id="school">
+                <center>
+                <img id="schoollogo" src="nyde.png">
+                <h1 id="schoolname"> Click on School to get more information </h1>
+                <p id="schooldesc"> These are all the places I have taken college courses at, not including AP classes</p>
+                <p id="schoolclass"> These include all classes I have taken</p><br>
+                </center>
+            </div>
+        </div>
+        <!-- (END) Education Page-->
+
+        <!-- (START) Project Page -->
+        <div class="projectpage" id="projectpage">
+            <div id="project-image">
+                <img id="project-img" src="Upon-Them.png">
+            </div>
+            <div id="project-title">
+                <h1 id="project-name"> Upon Them </h1>
+            </div>
+            <div id="project-desc-pull">
+                <button id="pull" onclick="pulldesc()"> D<br>E<br>S<br>C<br>R<br>I<br>P<br>T<br>I<br>O<br>N </button>
+            </div>
+            <div id="project-desc">
+                <p id="project-text"> 
+                    1/2022 to 2/2022 <br>
+                    <a href="https://play.unity.com/mg/other/upon-them-v1-0">Link</a><br>
+                    The first game I created using Unity. The game is a 2D multiplayer game inspired by the game Among Us. 
+                    However, when implementing the multiplayer aspect of the game, I ran into a few issues. 
+                    One of the largest bug was the each players screen was affected by other player actions resulting in display glitches. 
+                    Learned how to use Unity Engine and code in C# </p>
+            </div>
+            <div id="project-change">
+                <button id="project-left" onclick="prevproject()"><img id="arrow-left" src="arrow.png"></button>
+                <button id="project-right" onclick="nextproject()"><img id="arrow-right" src="arrow.png"></button>
+            </div>
+        </div>
+        <!-- (END) Project Page -->
+
+        <!-- (START) Contact Page-->
+        <div class="contactpage" id="contactpage">
+            <div id="contactcontainer">
+                <div id="contact-left">
+                    <Center>
+                    <h1 id="contact">Contact Me</h1>
+                    <p class="input-desc" id="name-title"> Name*: </p><input class="input" id="name-input" type="text" placeholder="Name">
+                    <p class="input-desc" id="email-title"> Email*: </p><input class="input" id="email-input" type="text" placeholder="Email@gmail.com">
+                    <p class="input-desc" id="phone-title"> Phone: </p><input class="input" id="phone-input" type="text" placeholder="1111111111">
+                    </Center>
+                </div>
+                <div id="contact-right">
+                    <center>
+                    <p class="input-desc" id="message-title"> Message*: </p><textarea id="message-input" type="text" placeholder="Message"></textarea>
+                    <button id="submit-contact" onclick="sendmessage()"> Submit Message </button>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <!-- (END) Contact Page-->
+
+        <!-- (START) Setting Page -->
+        <div class="settingpage" id="settingpage">
+            <div id="setting-frame">
+                <p id="timer"></p>
+                <div id="light-container">
+                <p id="light-filter"> Light Mode: </p>
+                <div id="mode-slider">
+                    <div id="slider" onclick="changefilter()">DARK</div>
+                </div>
+                </div>
+
+                <p id="reminder"> Currently, the signup and login setting does not work as intended since PHP is not working for my VS Code.<br> 
+                    The following is a set account: <br>
+                    Username: TestAccount <br>
+                    Passowrd: TestPassword <br>
+                </p>
+
+                <div id="setting-button-container">
+                    <button id="loginpage-but" onclick="loginchange()"> LOG IN </button>
+                    <button id="signuppage-but" onclick="signupchange()"> SIGN UP </button>
+                </div>
+
+                <div id="login">
+                    <h1 id="setting-title"> LOG IN </h1>
+                    <div id="username-login"><p class="setting-title" id="user-title">Username: </p><input class="settinginput"  id="user-inputl"></div>
+                    <div id="password-login"><p class="setting-title" id="pass-title">Password: </p><input class="settinginput" type="password" id="pass-inputl"></div>
+                    <button id="back-button" onclick='backtosetting("login")'> BACK </button>
+                    <div id="button-login">
+                        <button id="login-button" onclick="login()"> LOG IN</button>
+                    </div>
+                </div>
+
+                <div id="signup">
+                    <h1 id="setting-title"> SIGN UP </h1>
+                    <div id="name-signup"><p class="setting-title" id="name-title">Name: </p><input class="settinginput"  id="name-inputs"></div>
+                    <div id="email-signup"><p class="setting-title" id="email-title">Email: </p><input class="settinginput"  id="email-inputs"></div>
+                    <div id="phone-signup"><p class="setting-title" id="phone-title">Phone: </p><input class="settinginput"  id="phone-inputs"></div>
+                    <div id="username-signup"><p class="setting-title" id="user-title">Username: </p><input class="settinginput"  id="user-inputs"></div>
+                    <div id="password-signup"><p class="setting-title" id="pass-title">Password: </p><input class="settinginput" type="password" id="pass-inputs"></div>
+                    <div id="password-signup2"><p class="setting-title" id="pass-title">Re-enter Password: </p><input class="settinginput" type="password" id="pass-inputs2"></div>
+                    <button id="back-button" onclick='backtosetting("signup")'> BACK </button>
+                    <div id="button-signup">
+                        <button id="signup-button" onclick="signup()"> SIGN UP</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- (END) Setting Page -->
     </div>
-    <script src="practice.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
