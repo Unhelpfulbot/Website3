@@ -50,10 +50,10 @@ var projects = [
     },
     {
         name: 'Personal Website #2',
-        date: '4/2023 to Current',
-        desc: 'resigning a website that include a lot of different feature with a better design for devices with large screens.',
+        date: '4/2023 to 5/2023',
+        desc: 'redesigning a website that include a lot of different feature with a better design for devices with large screens. Website includes a game and many features that display the complexity of the web.',
         link: 'https://unhelpfulbot.github.io/',
-        img: ''
+        img: 'NewWeb.png'
     }
 ]
     

@@ -482,6 +482,7 @@ function reset(){
     snakeBody = [];
     facts = [];
     listnum = [];
+    document.getElementById("facts").innerHTML = "";
     context.fillStyle = "lime";
     snakeX = blocksize * Math.floor(Math.random() * 20);
     snakeY =blocksize * Math.floor(Math.random() * 20);
